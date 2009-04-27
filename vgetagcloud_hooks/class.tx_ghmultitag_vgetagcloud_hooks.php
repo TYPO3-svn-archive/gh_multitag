@@ -70,11 +70,11 @@ class tx_ghmultitag_vgetagcloud_hooks {
 		if($callingObj->conf['targetPage'] != $callingObj->cObj->data['uid']) {
 			return $keywords;
 		}
-		
+
 		if(empty($this->submittedKeywords)) {
 			return $keywords;
 		}
-		
+
 		$transformedKeywords = array();
 		foreach ($keywords as $aKeyword) {
 			if (!in_array($aKeyword, $this->submittedKeywords)) {
@@ -99,13 +99,33 @@ class tx_ghmultitag_vgetagcloud_hooks {
 		if($callingObj->conf['targetPage'] != $callingObj->cObj->data['uid']) {
 			return $pages;
 		}
-		
+
 		if(empty($this->submittedPages)) {
 			return $pages;
 		}
-		
+
 		return implode(',', $this->submittedPages);
 	}
 
+	/**
+	 * This method receives the data array of the calling cObj as a reference
+	 * It can thus modify it as desired
+	 *
+	 * @param	array	$data: data array of the calling cObj
+	 *
+	 * @return	void
+	 */
+	function processTagData(&$data) {
+
+		if(empty($this->submittedKeywords)) {
+			return true;
+		}
+
+		$keywords = $this->submittedKeywords;
+		$keywords[] = urldecode($data['tag_keyword']);
+		$keywords = array_map('rawurlencode', $keywords);
+		$data['tag_keyword'] = implode('_', $keywords);
+		return true;
+	}
 }
 ?>

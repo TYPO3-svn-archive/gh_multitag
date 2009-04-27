@@ -7,4 +7,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tx_vgetagcloud_pi1']['postProcessRawK
 
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tx_vgetagcloud_pi1']['postProcessPages'][] = 'EXT:gh_multitag/vgetagcloud_hooks/class.tx_ghmultitag_vgetagcloud_hooks.php:tx_ghmultitag_vgetagcloud_hooks';
 
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tx_vgetagcloud_pi1']['processTagData'][] = 'EXT:gh_multitag/vgetagcloud_hooks/class.tx_ghmultitag_vgetagcloud_hooks.php:tx_ghmultitag_vgetagcloud_hooks';
+
 ?>

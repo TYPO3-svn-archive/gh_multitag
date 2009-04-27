@@ -1,4 +1,8 @@
 2009-04-27 Gregor Hermens <gregor@a-mazing.de>
+	* already submitted tags are now urlencoded correctly
+	* release 0.0.2
+
+2009-04-27 Gregor Hermens <gregor@a-mazing.de>
 	* alpha release 0.0.1
 
 2009-04-24 Gregor Hermens <gregor@a-mazing.de>

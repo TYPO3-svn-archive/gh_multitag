@@ -1,6 +1,6 @@
 plugin {
     tx_vgetagcloud_pi1 {
-	tagWrap.typolink.additionalParams.dataWrap = &tx_vgetagcloud_pi2[pages]={field:tag_pages}&tx_vgetagcloud_pi2[keyword]={GPvar:tx_vgetagcloud_pi2|keyword}_{field:tag_keyword}&tx_vgetagcloud_pi2[startpage]={field:tag_startpage}
+	tagWrap.typolink.additionalParams.dataWrap = &tx_vgetagcloud_pi2[pages]={field:tag_pages}&tx_vgetagcloud_pi2[keyword]={field:tag_keyword}&tx_vgetagcloud_pi2[startpage]={field:tag_startpage}
     }
     tx_vgetagcloud_pi2 {
 	keyword {
