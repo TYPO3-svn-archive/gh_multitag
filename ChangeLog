@@ -1,4 +1,8 @@
-2009-04-27 Gregor Hermens <gregor@a-mazing.de>
+2009-10-17 Gregor Hermens <gregor@a-mazing.de>
+	* bugfix: no startpage transmitted when using styles on tags
+	* release 0.1.1
+
+2009-10-17 Gregor Hermens <gregor@a-mazing.de>
 	* changed TS setup and urlen/decoding to work with vge_tagcloud 1.4.0
 	* changed dependencies to vge_tagcloud >= 1.4.0
 	* changed status to beta
