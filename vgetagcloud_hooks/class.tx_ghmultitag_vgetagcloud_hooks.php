@@ -21,6 +21,21 @@
 *
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
+/**
+ * [CLASS/FUNCTION INDEX of SCRIPT]
+ *
+ *
+ *
+ *   48: class tx_ghmultitag_vgetagcloud_hooks
+ *   60:     function tx_ghmultitag_vgetagcloud_hooks()
+ *   83:     function postProcessRawKeywords($keywords, &$callingObj)
+ *  111:     function postProcessPages($pages, &$callingObj)
+ *  132:     function processTagData(&$data)
+ *
+ * TOTAL FUNCTIONS: 4
+ * (This index is automatically created/updated by the extension "extdeveval")
+ *
+ */
 
 
 /**
@@ -39,6 +54,8 @@ class tx_ghmultitag_vgetagcloud_hooks {
 	 * Constructor
 	 *
 	 * Fetches url parameters submitted by tx_vgetagcloud_pi1 for use in other methods
+	 *
+	 * @return	[type]		...
 	 */
 	function tx_ghmultitag_vgetagcloud_hooks() {
 		$gpVars = t3lib_div::_GP('tx_vgetagcloud_pi2');
@@ -59,10 +76,9 @@ class tx_ghmultitag_vgetagcloud_hooks {
 	 *
 	 * All keywords already included into the search are removed from this list
 	 *
-	 * @param	array	$keywords: list of keywords
-	 * @param	mixed	$callingObj: callback to the calling object
-	 *
-	 * @return	array	transformed list of keywords
+	 * @param	array		$keywords: list of keywords
+	 * @param	mixed		$callingObj: callback to the calling object
+	 * @return	array		transformed list of keywords
 	 */
 	function postProcessRawKeywords($keywords, &$callingObj) {
 
@@ -88,10 +104,9 @@ class tx_ghmultitag_vgetagcloud_hooks {
 	 * This method recieves a comma separated list of pages, from which the tags for the cloud are extracted.
 	 * If a list of pages has already been submitted the original list is replaced by this one.
 	 *
-	 * @param	string	$pages: comma separated list of pages
-	 * @param	mixed	$callingObj: callback to the calling object
-	 *
-	 * @return	string transformed list of pages
+	 * @param	string		$pages: comma separated list of pages
+	 * @param	mixed		$callingObj: callback to the calling object
+	 * @return	string		transformed list of pages
 	 */
 	function postProcessPages($pages, &$callingObj) {
 
@@ -111,8 +126,7 @@ class tx_ghmultitag_vgetagcloud_hooks {
 	 * This method receives the data array of the calling cObj as a reference
 	 * It can thus modify it as desired
 	 *
-	 * @param	array	$data: data array of the calling cObj
-	 *
+	 * @param	array		$data: data array of the calling cObj
 	 * @return	void
 	 */
 	function processTagData(&$data) {
@@ -123,9 +137,13 @@ class tx_ghmultitag_vgetagcloud_hooks {
 
 		$keywords = $this->submittedKeywords;
 		$keywords[] = urldecode($data['tag_keyword']);
-		$keywords = array_map('rawurlencode', $keywords);
 		$data['tag_keyword'] = implode('_', $keywords);
 		return true;
 	}
+}
+
+
+if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/gh_multitag/vgetagcloud_hooks/class.tx_ghmultitag_vgetagcloud_hooks.php'])	{
+	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/gh_multitag/vgetagcloud_hooks/class.tx_ghmultitag_vgetagcloud_hooks.php']);
 }
 ?>
