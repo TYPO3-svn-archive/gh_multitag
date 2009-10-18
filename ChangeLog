@@ -1,3 +1,6 @@
+2009-10-18 Gregor Hermens <gregor@a-mazing.de>
+	* some cleanup in documentation
+
 2009-10-17 Gregor Hermens <gregor@a-mazing.de>
 	* bugfix: no startpage transmitted when using styles on tags
 	* release 0.1.1
