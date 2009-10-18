@@ -1,3 +1,7 @@
+2009-10-19 Gregor Hermens <gregor@a-mazing.de>
+	* adapted changes to the postProcessPages hook of vge_tagcloud
+	* release 0.1.2
+
 2009-10-18 Gregor Hermens <gregor@a-mazing.de>
 	* some cleanup in documentation
 

@@ -101,7 +101,7 @@ class tx_ghmultitag_vgetagcloud_hooks {
 	}
 
 	/**
-	 * This method recieves a comma separated list of pages, from which the tags for the cloud are extracted.
+	 * This method recieves an array of pages, from which the tags for the cloud are extracted.
 	 * If a list of pages has already been submitted the original list is replaced by this one.
 	 *
 	 * @param	string		$pages: comma separated list of pages
@@ -118,8 +118,7 @@ class tx_ghmultitag_vgetagcloud_hooks {
 		if(empty($this->submittedPages)) {
 			return $pages;
 		}
-
-		return implode(',', $this->submittedPages);
+		return $this->submittedPages;
 	}
 
 	/**
