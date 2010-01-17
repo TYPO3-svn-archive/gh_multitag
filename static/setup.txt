@@ -18,7 +18,7 @@ plugin {
 
 [globalVar = TSFE:id = {$plugin.tx_vgetagcloud_pi1.pageID}]
 	plugin.tx_vgetagcloud_pi1.startPage {
-		data = GPvar:tx_vgetagcloud_pi2|startpage
+		data = GP:tx_vgetagcloud_pi2|startpage
 		ifEmpty.data = leveluid:0
 	}
 [global]

@@ -118,6 +118,7 @@ class tx_ghmultitag_vgetagcloud_hooks {
 		if(empty($this->submittedPages)) {
 			return $pages;
 		}
+
 		return $this->submittedPages;
 	}
 
